@@ -1,0 +1,69 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "declarationDir": "dist",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "downlevelIteration": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@Mocks/*": [
+        "./@mocks/*"
+      ],
+      "@Types/*": [
+        "./@types/*"
+      ],
+      "@Constants/*": [
+        "./core/constants/*"
+      ],
+      "@Libs/*": [
+        "./core/libs/*"
+      ],
+      "@Helpers/*": [
+        "./core/helpers/*"
+      ],
+      "@Service/*": [
+        "./core/service/*"
+      ],
+      "@Store/*": [
+        "./core/store/*"
+      ],
+      "@Tests/*": [
+        "./tests/*"
+      ]
+    },
+    "types": [
+      "@types/jest",
+      "@types/node"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "src/@types"
+    ]
+  },
+  "files": [
+    "src/cms-utility.ts"
+  ],
+  "include": [
+    "**/*.*",
+    "**/*.svg"
+  ]
+}
