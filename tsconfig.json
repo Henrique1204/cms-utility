@@ -37,8 +37,11 @@
       "@Libs/*": [
         "./core/libs/*"
       ],
-      "@Helpers/*": [
-        "./core/helpers/*"
+      "@Utils/*": [
+        "./core/utils/*"
+      ],
+      "@UseCases/*": [
+        "./core/useCases/*"
       ],
       "@Service/*": [
         "./core/service/*"
@@ -63,7 +66,10 @@
     "src/cms-utility.ts"
   ],
   "include": [
-    "**/*.*",
+    "./src/**/**.*",
     "**/*.svg"
+  ],
+  "exclude": [
+    "src/**/*.test*"
   ]
 }
