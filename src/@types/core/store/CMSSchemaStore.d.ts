@@ -1,5 +1,5 @@
 export type ContentControl = {
-  onReceiveValue: () => Promise<string>;
+  onReceiveValue: () => Promise<Record<string, string | string[]>>;
   onUpdateValue: (value: string) => Promise<void>;
 };
 
@@ -9,13 +9,13 @@ export type ContentField = {
   type: string;
   label: string;
   defaultValue: any;
-} & ContentControl;
+};
 
 export type ContentGroup = {
   id: string;
   title: string;
   fields: string[];
-};
+} & ContentControl;
 
 export type CMSSchemaStore = {
   groups: ContentGroup[];
